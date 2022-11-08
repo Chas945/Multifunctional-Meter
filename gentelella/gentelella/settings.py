@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    
+    'app',
+
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,14 @@ WSGI_APPLICATION = 'gentelella.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'MFMAMI1',
+       'USER': 'postgres',
+       'PASSWORD': 'Rahul@1213',
+       'HOST': 'localhost',
+       'PORT': '5432'
+   }
 }
 
 
@@ -108,11 +114,12 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
-USE_I18N = True
 
+USE_I18N = True
+ 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False 
 
 
 # Static files (CSS, JavaScript, Images)

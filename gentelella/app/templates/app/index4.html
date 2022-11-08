@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title>
+		Fetech data from Database
+	</title>
+</head>
+<body>
+	<center>
+		<h1>Getting data</h1></hr>
+		<table border = "1"><hr>
+			<tr>
+				<th> Control ID </th>
+				<th> Control Name</th>
+				<th> Desc</th>
+			</tr>
+			{% for result in data%}
+
+			<tr>
+				<td>{{result.contorl_id}}</td>
+				<td>{{result.control_name}}</td>
+				<td>{{result.control_desc}}</td>
+			</tr>
+			{% endfor %}
+
+	</center>
+</body>

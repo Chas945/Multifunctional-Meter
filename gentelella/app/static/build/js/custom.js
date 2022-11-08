@@ -701,25 +701,25 @@ function init_chart_doughnut() {
                 labels: [
                     "Symbian",
                     "Blackberry",
-                    "Other",
-                    "Android",
-                    "IOS"
+                    //"Other",
+                    //"Android",
+                    //"IOS"
                 ],
                 datasets: [{
                     data: [15, 20, 30, 10, 30],
                     backgroundColor: [
                         "#BDC3C7",
                         "#9B59B6",
-                        "#E74C3C",
-                        "#26B99A",
-                        "#3498DB"
+                        //"#E74C3C",
+                        //"#26B99A",
+                        //"#3498DB"
                     ],
                     hoverBackgroundColor: [
                         "#CFD4D8",
                         "#B370CF",
-                        "#E95E4F",
-                        "#36CAAB",
-                        "#49A9EA"
+                        //"#E95E4F",
+                        //"#36CAAB",
+                        //"#49A9EA"
                     ]
                 }]
             },
@@ -2288,25 +2288,25 @@ function init_charts() {
             labels: [
                 "Dark Grey",
                 "Purple Color",
-                "Gray Color",
-                "Green Color",
-                "Blue Color"
+                //"Gray Color",
+                //"Green Color",
+                //"Blue Color"
             ],
             datasets: [{
-                data: [120, 50, 140, 180, 100],
+                data: [120, 50], //140, 180, 100],
                 backgroundColor: [
                     "#455C73",
                     "#9B59B6",
-                    "#BDC3C7",
-                    "#26B99A",
-                    "#3498DB"
+                    //"#BDC3C7",
+                    //"#26B99A",
+                    //"#3498DB"
                 ],
                 hoverBackgroundColor: [
                     "#34495E",
                     "#B370CF",
-                    "#CFD4D8",
-                    "#36CAAB",
-                    "#49A9EA"
+                    //"#CFD4D8",
+                    //"#36CAAB",
+                    //"#49A9EA"
                 ]
 
             }]

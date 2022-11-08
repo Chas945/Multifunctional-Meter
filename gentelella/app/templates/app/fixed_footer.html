@@ -1,29 +1,123 @@
 {% extends "app/base_site.html" %}
 
-{% block title %} Fixed Footer {% endblock title %}
+      {% block title %} Fixed Sidebar {% endblock title %}
 
-{% block stylesheets %}
-  {{ block.super }}
-  <!-- jQuery custom content scroller -->
-  <link href="/static/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
-{% endblock stylesheets %}
+      {% block stylesheets %}
+        {{ block.super }}
+        <!-- jQuery custom content scroller -->
+        <link href="/static/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+      {% endblock stylesheets %}
 
-{% block body_class %}nav-md footer_fixed{% endblock body_class %}
+      {% block sidebar_class %}nav-md menu_fixed{% endblock sidebar_class %}
 
-{% block content %}
-  <div class="right_col" role="main">
-    <div class="">
-      <div class="page-title">
-        <div class="title_left">
-          <h3>Fixed Footer <small> Just add class <strong>footer_fixed</strong></small></h3>
+      {% block content %}
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h1><u>SWITCH CONTROL</u></h1>
+                <div class="clearfix"></div>
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+
+
+
+
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div class="x_content">
+
+
+
+
+
+          <form>
+            <div class="input-row">
+              <label for="Switch">Switch ID</label>
+              <input type="text" name="Switch" id="Switch" />
+            </div>
+            <div class="input-row">
+              <label for="Name">Switch Name</label>
+              <input type="text" name="Name" id="Name" />
+            </div>
+            <button>Submit</button>
+          </form>
+                      <div class="row">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                      <div class="x_title">
+          <table class="table">
+            <thead>
+              <tr>
+
+
+
+
+                <th>Name</th>
+                <th>Switch</th>
+
+
+
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+                      </div>
+                    </div>
+                  </div>
+                    </div>
+          <script>
+            const formEl = document.querySelector("form");
+            const tbodyEl = document.querySelector("tbody");
+            const tableEl = document.querySelector("table");
+            function onAddSwitch(e) {
+              e.preventDefault();
+
+              const Switch = document.getElementById("Switch").value;
+              const Name= document.getElementById("Name").value;
+              tbodyEl.innerHTML += `
+                  <tr>
+                      <td>${Name}</td>
+                      <td>${Switch}</td>
+                      <td><button class="ON">ON</button></td>
+                      <td><button class="ON">OFF</button></td>
+                  </tr>
+              `;
+            }
+
+
+
+
+            formEl.addEventListener("submit", onAddSwitch);
+
+          </script>
+        </body>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </div>
-  </div>
-{% endblock content %}
 
-{% block javascripts %}
-  {{ block.super }}
-  <!-- jQuery custom content scroller -->
-  <script src="/static/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-{% endblock javascripts %}
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      {% endblock content %}
+
+      {% block javascripts %}
+        {{ block.super }}
+        <!-- jQuery custom content scroller -->
+        <script src="/static/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+      {% endblock javascripts %}
